@@ -1,0 +1,106 @@
+/* Importar una fuente moderna desde Google Fonts (ej. 'Roboto') */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --fondo-principal: #f0f2f5;
+    --color-principal: #4a90e2;
+    --color-secundario: #ffffff;
+    --sombra: rgba(0, 0, 0, 0.1);
+    --radio: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #81ecec, #74b9ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contenedor {
+    background-color: var(--color-secundario);
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: var(--radio);
+    box-shadow: 0 4px 20px var(--sombra);
+    text-align: center;
+    overflow: hidden; /* O auto */
+}
+
+.tituloForm {
+    font-size: 1.8rem;
+    color: var(--color-principal);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+/* Estilos de los labels y inputs */
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: var(--radio);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: var(--color-principal);
+    outline: none;
+}
+
+/* Sección para checkboxes */
+.cbCont {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.cbCont label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #555;
+    cursor: pointer;
+}
+
+.cbCont input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+/* Botón de envío */
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    border: none;
+    border-radius: var(--radio);
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357ABD;
+}

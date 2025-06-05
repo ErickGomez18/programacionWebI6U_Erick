@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Asociativos (Objetos JS)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulación de Array Asociativo (Objeto JS)</h1>
+        
+        <div class="form-group">
+            <label for="clave">Clave:</label>
+            <input type="text" id="clave" placeholder="Ej: nombre">
+        </div>
+        
+        <div class="form-group">
+            <label for="valor">Valor:</label>
+            <input type="text" id="valor" placeholder="Ej: Juan">
+        </div>
+        
+        <button onclick="agregarElemento()">Agregar</button>
+        <button onclick="buscarElemento()">Buscar por Clave</button>
+        
+        <div id="resultado"></div>
+        <div id="lista"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hola Mundo con AJAX</title>
+    <script type="text/javascript">
+        function descargaArchivo() {
+            let peticion_http;
+            if (window.XMLHttpRequest) {
+                peticion_http = new XMLHttpRequest();
+            } else if (window.ActiveXObject) {
+                peticion_http = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            peticion_http.onreadystatechange = function() {
+                if (peticion_http.readyState == 4) {
+                    if (peticion_http.status == 200) {
+                        // Mostrar el contenido del archivo en un div
+                        document.getElementById('contenido').innerHTML = peticion_http.responseText;
+                    } else {
+                        alert("Hubo un problema al cargar el archivo.");
+                    }
+                }
+            };
+
+            // Realizar la petición
+            peticion_http.open('GET', 'http://127.0.0.1:5500/holamundo.txt', true); // Ajusta la URL según tu servidor
+            peticion_http.send(null);
+        }
+
+        window.onload = descargaArchivo;
+    </script>
+</head>
+<body>
+    <h1>Cargando archivo...</h1>
+    <div id="contenido"></div> <!-- Contenedor para mostrar el contenido -->
+</body>
+</html>

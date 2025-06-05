@@ -1,0 +1,41 @@
+/*Generales*/
+.contenedor{
+    background-color: darkmagenta;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px 20px; /* 10px entre filas, 20px entre columnas */
+    padding: 10px;
+    border-color: black;
+    border-width: 50px;
+    justify-content: center;
+}
+.item{
+    padding: 200px;
+    text-transform: uppercase;
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+.itemG1{
+    background-color: yellow;
+}
+.itemG2{
+    background-color: brown;
+}
+/*Items unitarios*/
+.especialItem{
+    background-color: blue;
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.item4{
+    /*Item que debe ocupar su lugar original + el de abajo*/
+    grid-row: span 2; /* Ocupa 2 filas verticalmente desde donde esté */
+    background-color: #33cc33;
+}
+.item:hover{
+    background-color: aliceblue;
+    color: black;
+}
+

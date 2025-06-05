@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flor de la Bahía</title>
+    <!-- Enlace a css -->
+    <link rel="stylesheet" href="../css/Catalogoflores.css">
+    <!-- Fuentes de Google para letra bonita -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos para los controles de cantidad */
+        .controles-cantidad {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0;
+        }
+
+        .controles-cantidad button {
+            background-color: #4CAF50; /* Verde similar al botón Añadir al carrito */
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .controles-cantidad button:hover {
+            background-color: #45a049; /* Verde un poco más oscuro al hacer hover */
+            transform: scale(1.1);
+        }
+
+        .controles-cantidad input {
+            width: 50px;
+            height: 30px;
+            text-align: center;
+            margin: 0 10px;
+            padding: 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            -moz-appearance: textfield; /* Oculta flechas en Firefox */
+        }
+
+        /* Oculta flechas en Chrome, Safari, Edge, Opera */
+        .controles-cantidad input::-webkit-outer-spin-button,
+        .controles-cantidad input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .controles-cantidad input:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+
+        /* Estilo para el botón Añadir al carrito */
+        .btn.agregar-carrito {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .btn.agregar-carrito:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cabecera-principal">
+        <div class="contenedor">
+            <a href="index.html" class="logo-marca">
+                <img src="images/logo.png" alt="Dino-Bake Logo" width="120">
+            </a>
+            <!-- Menú de navegación principal -->
+            <nav class="navegacion-principal">
+                <ul class="lista-navegacion">
+                    <li class="item-navegacion">
+                        <a href="emprendedores.html" class="enlace-navegacion">
+                            <img src="images/emprendedor.png" alt="Emprendedores" class="icono-navegacion">
+                            <span>Emprendedores</span>
+                        </a>
+                    </li>
+                    <li class="item-navegacion">
+                        <a href="carrito.html" class="enlace-navegacion">
+                            <img src="images/carrito.png" alt="Carrito" class="icono-navegacion">
+                            <span>Carrito</span>
+                        </a>
+                    </li>
+                    <li class="item-navegacion">
+                        <a href="contacto.html" class="enlace-navegacion">
+                            <img src="images/contacto.png" alt="Contacto" class="icono-navegacion">
+                            <span>Contacto</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="perfil.html" class="perfil-usuario">
+                <img src="images/emprendedor.png" alt="usuario">
+            </a>
+        </div>
+    </header>
+    
+    <!-- Contenido principal de la página -->
+    <main class="contenido-principal">
+        <section class="seccion-hero">
+            <div class="contenedor">
+                <div id="catalogo"></div>
+                <div class="contenido-hero">
+                    <div class="texto-hero">
+                        <h1>Flor de la Bahía</h1>
+                        <p class="descripcion-hero">
+                            ¡En Flor de la Bahía te ofrecemos las flores más frescas y hermosas de Chetumal! Orgullosamente enraizados en nuestra bahía, cada arreglo 
+                            refleja la vitalidad de la región. Seleccionamos y cuidamos cada flor para garantizarte la máxima calidad y frescura, trayendo la esencia 
+                            de Chetumal directo a tu hogar. Descubre por qué somos la elección número uno para quienes buscan la excelencia floral en nuestra ciudad.
+                        </p>
+                    </div>
+                    <div class="imagen-hero">
+                        <img src="images/florlogo.png" class="mostrador-producto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de catálogo de productos -->
+        <section class="seccion-catalogo">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Nuestros productos</h2>
+                <div class="rejilla-productos">
+
+                    <div class="tarjeta-producto" data-id="flores001" data-nombre="Entre Hilos y Flores" data-precio="500" data-emprendedor="flores">
+                        <img src="images/rosas1.jpg" alt="Entre Hilos y Flores" class="imagen-producto">
+                        <div class="info-producto">
+                            <h3>Entre Hilos y Flores</h3>
+                            <p class="precio-producto">$500 c/u</p>
+                            <div class="controles-cantidad">
+                                <button class="restar-cantidad">-</button>
+                                <input type="number" value="1" min="1" class="entrada-cantidad">
+                                <button class="sumar-cantidad">+</button>
+                            </div>
+                            <button class="btn agregar-carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-producto" data-id="flores002" data-nombre="Rosa Bela" data-precio="600" data-emprendedor="flores">
+                        <img src="images/rosas2.jpg" alt="Rosa Bela" class="imagen-producto">
+                        <div class="info-producto">
+                            <h3>Rosa Bela</h3>
+                            <p class="precio-producto">$600 c/u</p>
+                            <div class="controles-cantidad">
+                                <button class="restar-cantidad">-</button>
+                                <input type="number" value="1" min="1" class="entrada-cantidad">
+                                <button class="sumar-cantidad">+</button>
+                            </div>
+                            <button class="btn agregar-carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-producto" data-id="flores003" data-nombre="Diseño con Alma" data-precio="400" data-emprendedor="flores">
+                        <img src="images/rosas3.jpg" alt="Diseño con Alma" class="imagen-producto">
+                        <div class="info-producto">
+                            <h3>Diseño con Alma</h3>
+                            <p class="precio-producto">$400 c/u</p>
+                            <div class="controles-cantidad">
+                                <button class="restar-cantidad">-</button>
+                                <input type="number" value="1" min="1" class="entrada-cantidad">
+                                <button class="sumar-cantidad">+</button>
+                            </div>
+                            <button class="btn agregar-carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-producto" data-id="flores004" data-nombre="Coqueta" data-precio="450" data-emprendedor="flores">
+                        <img src="images/rosas4.jpg" alt="Coqueta" class="imagen-producto">
+                        <div class="info-producto">
+                            <h3>Coqueta</h3>
+                            <p class="precio-producto">$450 c/u</p>
+                            <div class="controles-cantidad">
+                                <button class="restar-cantidad">-</button>
+                                <input type="number" value="1" min="1" class="entrada-cantidad">
+                                <button class="sumar-cantidad">+</button>
+                            </div>
+                            <button class="btn agregar-carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección del proceso de compra -->
+        <section class="como-trabajamos">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Cómo comprar</h2>
+                <div class="pasos-proceso">
+                    <div class="paso">
+                        <div class="numero-paso">1</div>
+                        <h3>Realiza tu pedido</h3>
+                    </div>
+                    <div class="paso">
+                        <div class="numero-paso">2</div>
+                        <h3>Recibe confirmación</h3>
+                    </div>
+                    <div class="paso">
+                        <div class="numero-paso">3</div>
+                        <h3>Realiza el pago</h3>
+                    </div>
+                    <div class="paso">
+                        <div class="numero-paso">4</div>
+                        <h3>Se entrega</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón de regreso -->
+            <div class="contenedor-boton">
+                <a href="emprendedores.html" class="boton-regreso-simple">Regresar</a>
+            </div>
+        </section>
+    </main>
+    <script src="../js/catalogo.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos con Clases JS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🛒 Gestión de Productos</h1>
+        
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Ej: Laptop HP">
+        </div>
+        
+        <div class="form-group">
+            <label for="precio">Precio ($):</label>
+            <input type="number" id="precio" placeholder="Ej: 1200">
+        </div>
+        
+        <div class="form-group">
+            <label for="categoria">Categoría:</label>
+            <select id="categoria">
+                <option value="electrónica">Electrónica</option>
+                <option value="ropa">Ropa</option>
+                <option value="hogar">Hogar</option>
+            </select>
+        </div>
+        
+        <button onclick="agregarProducto()">➕ Agregar Producto</button>
+        <button onclick="filtrarProductos()">🔍 Filtrar por Categoría</button>
+        
+        <div id="resultado-filtro" class="resultado"></div>
+        
+        <h2>📋 Catálogo de Productos</h2>
+        <table id="tabla-productos">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Categoría</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpo-tabla"></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

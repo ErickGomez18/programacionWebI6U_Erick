@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Carrito</title>
+    <!-- Enlace a css -->
+    <link rel="stylesheet" href="../css/carrito.css">
+    <!-- Fuentes de Google para letra bonita -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Encabezado principal del sitio -->
+    <header class="encabezado-principal">
+        <div class="contenedor">
+            <!-- Logo de la marca -->
+            <a href="index.html" class="logo-marca">
+                <img src="images/logo.png" alt="Dino-Bake Logo" width="120">
+            </a>
+            
+            <!-- Navegación principal -->
+            <nav class="navegacion-principal">
+                <ul class="lista-navegacion">
+                    <li class="item-navegacion">
+                        <a href="emprendedores.html" class="enlace-navegacion">
+                            <img src="images/emprendedor.png" alt="Emprendedores" class="icono-navegacion">
+                            <span>Emprendedores</span>
+                        </a>
+                    </li>
+                    
+                    <li class="item-navegacion">
+                        <a href="carrito.html" class="enlace-navegacion">
+                            <img src="images/carrito.png" alt="Carrito" class="icono-navegacion">
+                            <span>Carrito</span>
+                        </a>
+                    </li>
+
+                    <li class="item-navegacion">
+                        <a href="contacto.html" class="enlace-navegacion">
+                            <img src="images/contacto.png" alt="Contacto" class="icono-navegacion">
+                            <span>Contáctanos</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <a href="perfil.html" class="perfil-usuario">
+                <img src="images/emprendedor.png" alt="usuario">
+            </a>
+        </div>
+    </header>
+    
+    <!-- Contenido principal de la página -->
+    <main class="contenido-principal">
+        <section class="encabezado-pagina">
+            <div class="contenedor">
+                <h1 class="titulo-pagina">Mi Carrito</h1>
+            </div>
+        </section>
+
+        <!-- Sección del carrito -->
+        <section class="seccion-carrito">
+            <div class="contenedor">
+                <div id="contenido-carrito">
+                    <!-- Mensaje cuando está vacío -->
+                    <div id="carrito-vacio" class="carrito-vacio">
+                        <h2>Tu carrito está vacío</h2>
+                        <p>¡Añade algunos productos!</p>
+                        <a href="emprendedores.html" class="boton boton-principal">Ver emprendedores</a>
+                    </div>
+                    
+                    <!-- Contenido cuando hay productos -->
+                    <div id="carrito-con-productos" style="display: none;">
+                        <div class="articulos-carrito" id="lista-carrito">
+                            <!-- Los productos del carrito se insertarán aquí -->
+                        </div>
+                        
+                        <div class="resumen-carrito">
+                            <div class="fila-resumen">
+                                <span>Subtotal:</span>
+                                <span id="subtotal">$0.00</span>
+                            </div>
+                            <div class="fila-resumen">
+                                <span>Envío:</span>
+                                <span id="envio">$0.00</span>
+                            </div>
+                            <div class="fila-resumen total">
+                                <span>Total:</span>
+                                <span id="total">$0.00</span>
+                            </div>
+                            
+                            <div class="acciones-carrito">
+                                 <a href="Pago.html" class="boton boton-principal">Proceder al Pago</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../js/carrito.js"></script>
+</body>
+</html>

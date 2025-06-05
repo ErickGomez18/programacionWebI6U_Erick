@@ -1,0 +1,309 @@
+/* 
+  Variables CSS reutilizables 
+  - Colores principales, sombras y transiciones para consistencia visual
+*/
+:root {
+  --primary: #478ac9;
+  --light-bg: #f5f9ff;
+  --text: #333;
+  --text-light: #666;
+  --white: #fff;
+  --gray: #e9ecef;
+  --radius: 8px;
+  --shadow: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-hover: 0 8px 15px rgba(0,0,0,0.15);
+  --transition: all 0.3s ease;
+}
+
+/* Estilos base para toda la página */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para títulos */
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+/* Contenedor principal que centra el contenido */
+.contenedor {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.encabezado-principal {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.contenido-encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+}
+
+/* Navegación */
+.navegacion-principal {
+  position: relative;
+}
+
+.lista-navegacion {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item-navegacion {
+  margin-left: 20px;
+}
+
+.enlace-navegacion {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 5px 0;
+  position: relative;
+}
+
+.enlace-navegacion:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #478ac9;
+  transition: width 0.3s ease;
+}
+
+.enlace-navegacion:hover:after,
+.item-navegacion.actual .enlace-navegacion:after {
+  width: 100%;
+}
+
+/* ========= SECCIÓN HERO ========= */
+.seccion-hero {
+  background: var(--light-bg);
+  padding: 80px 0;
+}
+
+/* Contenedor flexible para texto e imagen */
+.contenido-hero {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.texto-hero {
+  flex: 1;
+}
+
+.imagen-hero {
+  flex: 1;
+}
+
+/* Título principal */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* Descripción */
+.descripcion-hero {
+  color: var(--text-light);
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+/* Imagen destacada */
+.mostrador-producto {
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* ========= CATÁLOGO ========= */
+.seccion-catalogo {
+  padding: 80px 0;
+}
+
+/* Título de sección con subrayado decorativo */
+.titulo-seccion {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.titulo-seccion::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--primary);
+  margin: 15px auto 0;
+}
+
+/* Grid de productos responsive */
+.rejilla-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Tarjeta de producto */
+.tarjeta-producto {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+/* Efecto hover en tarjetas */
+.tarjeta-producto:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Imagen del producto */
+.imagen-producto {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Contenedor de información del producto */
+.info-producto {
+  padding: 20px;
+}
+
+/* Nombre del producto */
+.info-producto h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Precio con color destacado */
+.precio-producto {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+
+/* ========= PROCESO DE COMPRA ========= */
+.como-trabajamos {
+  background: var(--light-bg);
+  padding: 80px 0;
+}
+
+/* Grid de pasos responsive */
+.pasos-proceso {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Estilo de cada paso */
+.paso {
+  background: var(--white);
+  padding: 30px 20px;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+/* Número del paso */
+.numero-paso {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+/* ========= BOTÓN DE REGRESO ========= */
+.contenedor-boton {
+    text-align: center;
+    margin: 50px 0 20px;
+}
+
+.boton-simple-regreso {
+    padding: 10px 90px;
+    background-color: #478ac9;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 20px;
+    transition: background-color 0.2s;
+}
+
+.boton-simple-regreso:hover {
+    background-color: #3a7ab9;
+}
+
+/* ========= MEDIA QUERIES ========= */
+@media (max-width: 992px) {
+  /* Cambia a diseño vertical en tablets */
+  .contenido-hero {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .imagen-hero {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ajustes para móviles */
+  .encabezado-principal .contenedor {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .navegacion-principal .lista-navegacion {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Un solo paso por línea en móviles pequeños */
+  .pasos-proceso {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Reducción de padding en móviles */
+  .seccion-hero, .seccion-catalogo, .como-trabajamos {
+    padding: 60px 0;
+  }
+}

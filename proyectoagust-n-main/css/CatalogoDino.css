@@ -1,0 +1,453 @@
+/* 
+  Variables CSS reutilizables 
+  - Colores principales, sombras y transiciones para consistencia visual
+*/
+:root {
+  --color-primario: #478ac9;
+  --fondo-claro: #f5f9ff;
+  --texto: #333;
+  --texto-claro: #666;
+  --blanco: #fff;
+  --gris: #e9ecef;
+  --radio: 8px;
+  --sombra: 0 4px 6px rgba(0,0,0,0.1);
+  --sombra-hover: 0 8px 15px rgba(0,0,0,0.15);
+  --transicion: all 0.3s ease;
+}
+
+/* Estilos base para toda la página */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--texto);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para títulos */
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+/* Contenedor principal que centra el contenido */
+.contenedor {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ENCABEZADO */
+.encabezado-principal {
+  background-color: var(--blanco);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Flexbox para alinear logo, navegación y perfil */
+.encabezado-principal .contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilo del logo */
+.logo-marca img {
+  width: 120px;
+  height: auto;
+}
+
+/* Estilos de navegación */
+.navegacion-principal .lista-navegacion {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+.item-navegacion {
+  list-style: none;
+}
+
+/* Estilos de enlaces de navegación */
+.enlace-navegacion {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--texto);
+  font-weight: 500;
+  transition: var(--transicion);
+}
+
+/* Enlace activo actual */
+.enlace-navegacion.activo {
+  border-bottom: 2px solid var(--color-primario);
+  color: var(--color-primario);
+}
+
+/* Iconos de navegación */
+.icono-navegacion {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+/* Perfil de usuario */
+.perfil-usuario {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-usuario {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ========= SECCIÓN HERO ========= */
+.seccion-hero {
+  background: var(--fondo-claro);
+  padding: 80px 0;
+}
+
+/* Contenedor flexible para texto e imagen */
+.contenido-hero {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.texto-hero {
+  flex: 1;
+}
+
+.imagen-hero {
+  flex: 1;
+}
+
+/* Título principal */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* Descripción */
+.descripcion-hero {
+  color: var(--texto-claro);
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+/* Imagen destacada */
+.mostrador-producto {
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+/* CATÁLOGO */
+.seccion-catalogo {
+  padding: 80px 0;
+}
+
+/* Título de sección con subrayado decorativo */
+.titulo-seccion {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+/* Grid de productos responsive */
+.rejilla-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Tarjeta de producto */
+.tarjeta-producto {
+  background: var(--blanco);
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  transition: var(--transicion);
+}
+
+/* Efecto hover en tarjetas */
+.tarjeta-producto:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-hover);
+}
+
+/* Imagen del producto */
+.imagen-producto {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Contenedor de información del producto */
+.info-producto {
+  padding: 20px;
+}
+
+/* Nombre del producto */
+.info-producto h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Precio con color destacado */
+.precio-producto {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primario);
+  margin-bottom: 15px;
+}
+
+/* Botón "Añadir al carrito" */
+.agregar-carrito {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: var(--color-primario);
+  color: var(--blanco);
+  border: none;
+  border-radius: var(--radio);
+  transition: var(--transicion);
+}
+
+/* Efecto hover del botón */
+.agregar-carrito:hover {
+  background: var(--blanco);
+  color: var(--color-primario);
+  border: 1px solid var(--color-primario);
+}
+
+/* PROCESO DE COMPRA */
+.como-trabajamos {
+  background: var(--fondo-claro);
+  padding: 80px 0;
+}
+
+/* Grid de pasos responsive */
+.pasos-proceso {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Estilo de cada paso */
+.paso {
+  background: var(--blanco);
+  padding: 30px 20px;
+  border-radius: var(--radio);
+  text-align: center;
+  box-shadow: var(--sombra);
+}
+
+/* Número del paso */
+.numero-paso {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primario);
+  margin-bottom: 15px;
+}
+
+/*  BOTÓN DE REGRESO  */
+.contenedor-boton {
+    text-align: center;
+    margin: 50px 0 20px;
+}
+
+.boton-regresar {
+    padding: 10px 90px;
+    background-color: var(--color-primario);
+    color: var(--blanco);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 20px;
+    transition: background-color 0.2s;
+}
+
+.boton-regresar:hover {
+    background-color: #3a7ab9;
+}
+
+/* TAMAÑO */
+@media (max-width: 992px) {
+  /* Cambia a diseño vertical en tablets */
+  .contenido-hero {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .imagen-hero {
+    order: -1;
+  }
+}
+        /* Estilos adicionales para los controles de cantidad */
+        .controles-cantidad {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0;
+        }
+
+        .controles-cantidad button {
+            background-color: #4CAF50; /* Verde similar al botón Añadir al carrito */
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .controles-cantidad button:hover {
+            background-color: #45a049; /* Verde un poco más oscuro al hacer hover */
+            transform: scale(1.1);
+        }
+
+        .controles-cantidad input {
+            width: 50px;
+            height: 30px;
+            text-align: center;
+            margin: 0 10px;
+            padding: 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            -moz-appearance: textfield; /* Oculta flechas en Firefox */
+        }
+
+        /* Oculta flechas en Chrome, Safari, Edge, Opera */
+        .controles-cantidad input::-webkit-outer-spin-button,
+        .controles-cantidad input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .controles-cantidad input:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+
+        /* Estilo actualizado para el botón Añadir al carrito */
+        .btn.agregar-carrito {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-align: center;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .btn.agregar-carrito:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+@media (max-width: 768px) {
+  /* Ajustes para móviles */
+  .encabezado-principal .contenedor {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .navegacion-principal .lista-navegacion {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Un solo paso por línea en móviles pequeños */
+  .pasos-proceso {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Reducción de padding en móviles */
+  .seccion-hero, .seccion-catalogo, .como-trabajamos {
+    padding: 60px 0;
+  }
+}
+
+/* Estilos para los controles de cantidad */
+.controles-cantidad {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.disminuir-cantidad, .aumentar-cantidad {
+    background: var(--gris);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-cantidad {
+    width: 50px;
+    text-align: center;
+    margin: 0 5px;
+    padding: 5px;
+    border: 1px solid var(--gris);
+    border-radius: 4px;
+}
+
+/* Feedback al agregar al carrito */
+.feedback-agregar-carrito {
+    position: absolute;
+    background: var(--color-primario);
+    color: var(--blanco);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    animation: aparecerDesaparecer 2s ease-in-out;
+}
+
+@keyframes aparecerDesaparecer {
+    0% { opacity: 0; transform: translateY(10px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}

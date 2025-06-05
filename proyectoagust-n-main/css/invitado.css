@@ -1,0 +1,227 @@
+/* Estilos base y variables */
+:root {
+    --color-primario: #478ac9;
+    --color-secundario: #f8f9fa;
+    --color-texto: #333;
+    --gris-claro: #e9ecef;
+    --blanco: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: #fff;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Cabecera */
+.encabezado-principal {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.contenido-encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+}
+
+/* Navegación */
+.navegacion-principal {
+  position: relative;
+}
+
+.lista-navegacion {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item-navegacion {
+  margin-left: 20px;
+}
+
+.enlace-navegacion {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 5px 0;
+  position: relative;
+}
+
+.enlace-navegacion:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #478ac9;
+  transition: width 0.3s ease;
+}
+
+.enlace-navegacion:hover:after,
+.item-navegacion.actual .enlace-navegacion:after {
+  width: 100%;
+}
+
+/* --- Contenido --- */
+.banner-hero {
+    background-color: #e2f0fd;
+    padding: 40px 0; 
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-hero {
+    font-family: 'Lobster', cursive;
+    color: var(--color-primario);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.subtitulo-hero {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.seccion-emprendedores {
+    padding: 40px 0;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.titulo-seccion::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primario);
+}
+
+.descripcion-seccion {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/*--*/
+.rejilla-emprendedores {
+    display: grid;
+    gap: 30px;
+}
+
+.tarjeta-emprendedor {
+    display: flex;
+    flex-direction: column;
+    background: var(--blanco);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.tarjeta-emprendedor:hover {
+    transform: translateY(-5px);
+}
+
+.imagen-tarjeta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    height: 200px;
+    width: 100%;
+}
+
+.imagen-tarjeta img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+.contenido-tarjeta {
+    padding: 20px;
+}
+
+.nombre-emprendedor {
+    color: var(--color-primario);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.boton-principal {
+    background-color: var(--color-primario);
+    color: var(--blanco);
+    border: 2px solid var(--color-primario);
+}
+
+.boton-principal:hover {
+    background-color: transparent;
+    color: var(--color-primario);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .encabezado-principal .contenedor {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .navegacion-principal .lista-navegacion {
+        gap: 10px;
+    }
+    
+    .titulo-hero {
+        font-size: 2rem;
+    }
+    
+    .tarjeta-emprendedor {
+        flex-direction: column;
+    }
+    
+    .diseño-invertido {
+        flex-direction: column;
+    }
+}

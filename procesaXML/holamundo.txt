@@ -1,0 +1,1 @@
+¡Hola Mundo! Esto es una prueba de AJAX con XAMPP.

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta | See To Mall</title>
+    <link rel="stylesheet" href="../css/crearcuenta.css">
+    <!--Letra bonita-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500&display=swap">
+</head>
+<body>
+    <header class="cabecera-sitio">
+        <div class="contenedor">
+            <div class="contenido-cabecera">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="See To Mall" width="120">
+                </a>
+                
+                <nav class="navegacion-principal">
+                    <ul>
+                        <li><a href="../invitados/quienesomosinvi.html">¿Quiénes somos?</a></li>
+                        <li><a href="../invitados/Contactoinvi.html">Contáctanos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="pagina-registro">
+        <div class="contenedor">
+            <div class="contenedor-registro">
+                <div>
+                    <img src="images/imagenchetumal.png" alt="See To Mall" width="650" height="700">
+                </div>
+                
+                <div class="contenedor-formulario-registro">
+                    <div class="envoltorio-formulario-registro">
+                        <h1>Crear cuenta</h1>
+                        
+                        <div class="selector-tipo-cuenta">
+                            <button id="btn-usuario" class="boton-tipo-cuenta activo">Usuario</button>
+                            <button id="btn-emprendedor" class="boton-tipo-cuenta">Emprendedor</button>
+                        </div>
+                        
+                        <form class="formulario-registro" action="#" method="POST">
+                            <!-- Campos comunes -->
+                            <div class="grupo-formulario">
+                                <label for="name">Nombre(s)</label>
+                                <input type="text" id="name" name="name" placeholder="Introduce tu nombre" required>
+                            </div>
+                            
+                            <div class="grupo-formulario">
+                                <label for="lastname">Apellidos</label>
+                                <input type="text" id="lastname" name="lastname" placeholder="Introduce tus apellidos" required>
+                            </div>
+                            
+                            <div class="grupo-formulario">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+                            </div>
+                            
+                            <div class="grupo-formulario">
+                                <label for="password">Contraseña</label>
+                                <input type="password" id="password" name="password" placeholder="Crea una contraseña segura" required>
+                            </div>
+                            
+                            <!-- Campos específicos para emprendedor (inicialmente ocultos) -->
+                            <div id="campos-emprendedor" style="display: none;">
+                                
+                                <div class="grupo-formulario">
+                                    <label for="phone">Teléfono de contacto</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Ingresa tu número telefónico">
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="boton boton-principal" id="boton-enviar">Registrarse como Usuario</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="contenedor-boton">
+        <a href="invitado.html" class="boton-regreso-simple">Regresar</a>
+    </div>
+    <div id="contenedor-usuarios"></div>
+
+    <div class="contenedor-datos" style="padding: 20px;">
+        <h2>Datos guardados</h2>
+        <table border="1" cellpadding="8" id="tabla-usuarios">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Tipo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se agregarán filas con JS -->
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="../js/registro.js"></script>
+</body>
+</html>

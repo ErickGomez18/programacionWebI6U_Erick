@@ -1,0 +1,17 @@
+#contenedor_princ{
+	width: 300px;
+	height: 500px;
+	background: indigo;
+	padding: 20px;
+	border: 15px dotted;
+	box-sizing: content-box;
+}
+
+#contenedor_hermano{
+	width: 300px;
+	height: 500px;
+	padding: 20px;
+	border: groove 15px;
+	background: yellow;
+	box-sizing: border-box;
+}

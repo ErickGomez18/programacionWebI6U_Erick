@@ -1,0 +1,147 @@
+/* Estilos base */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+/* Contenedor principal */
+.contenedor-bienvenida {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.grid-bienvenida {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+/* Imagen de bienvenida */
+.imagen-bienvenida {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagen-bienvenida img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Panel de bienvenida */
+.panel-bienvenida {
+  background-color: #e8f0fe;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.titulo-bienvenida {
+  font-family: 'Lobster', cursive;
+  font-size: 4.5rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+/* Botones */
+.botones-bienvenida {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.boton-bienvenida {
+  display: block;
+  padding: 18px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.boton-iniciar {
+  background-color: #478ac9;
+  color: white;
+}
+
+.boton-iniciar:hover {
+  background-color: #3a76b0;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.boton-registrar {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.boton-registrar:hover {
+  background-color: #27ae60;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.boton-invitado {
+  background-color: #f39c12;
+  color: white;
+}
+
+.boton-invitado:hover {
+  background-color: #e67e22;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .titulo-bienvenida {
+      font-size: 3.5rem;
+  }
+  
+  .boton-bienvenida {
+      font-size: 1.3rem;
+      padding: 15px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-bienvenida {
+      grid-template-columns: 1fr;
+  }
+  
+  .imagen-bienvenida {
+      min-height: 300px;
+  }
+  
+  .panel-bienvenida {
+      padding: 40px 20px;
+  }
+  
+  .titulo-bienvenida {
+      font-size: 3rem;
+      margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-bienvenida {
+      font-size: 2.5rem;
+  }
+  
+  .boton-bienvenida {
+      font-size: 1.1rem;
+      padding: 12px 20px;
+  }
+}

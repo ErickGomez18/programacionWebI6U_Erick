@@ -1,0 +1,338 @@
+/* Variables */
+:root {
+  --primary: #478ac9;
+  --primary-dark: #3a7ab9;
+  --light-bg: #f5f9ff;
+  --white: #fff;
+  --gray: #e9ecef;
+  --gray-dark: #d1d7dc;
+  --text: #333;
+  --text-light: #666;
+  --radius: 8px;
+  --shadow: 0 4px 6px rgba(0,0,0,0.1);
+  --transition: all 0.3s ease;
+}
+
+/* Estilos base */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: 0;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Cabecera */
+.cabecera-sitio {
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.contenido-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+  transition: var(--transition);
+}
+
+.logo img:hover {
+  opacity: 0.9;
+}
+
+.navegacion-principal ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navegacion-principal a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: var(--transition);
+  font-size: 16px;
+}
+
+.navegacion-principal a:hover {
+  color: var(--primary);
+}
+
+/* Página de registro */
+.pagina-registro {
+  padding: 60px 0;
+  min-height: calc(100vh - 150px);
+  display: flex;
+  align-items: center;
+}
+
+.contenedor-registro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background-color: var(--white);
+}
+
+.imagen-registro {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contenedor-formulario-registro {
+  background-color: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.envoltorio-formulario-registro {
+  width: 100%;
+  max-width: 400px;
+}
+
+.envoltorio-formulario-registro h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Selector de tipo de cuenta */
+.selector-tipo-cuenta {
+  display: flex;
+  margin-bottom: 25px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.boton-tipo-cuenta {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background-color: var(--gray);
+  color: var(--text-light);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+.boton-tipo-cuenta.activo {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.boton-tipo-cuenta:not(.activo):hover {
+  background-color: var(--gray-dark);
+}
+
+/* Formulario */
+.formulario-registro {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.grupo-formulario {
+  margin-bottom: 20px;
+}
+
+.grupo-formulario label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.grupo-formulario input,
+.grupo-formulario textarea,
+.grupo-formulario select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--gray);
+  border-radius: var(--radius);
+  font-family: 'Roboto', sans-serif;
+  transition: var(--transition);
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.grupo-formulario input:focus,
+.grupo-formulario textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(71, 138, 201, 0.2);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Botones */
+.boton {
+  display: inline-block;
+  padding: 12px 30px;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+}
+
+.boton-principal {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.boton-principal:hover {
+  background-color: var(--primary-dark);
+}
+
+.contenedor-boton {
+  text-align: center;
+  margin: 30px 0 20px;
+}
+
+.boton-regreso-simple {
+  padding: 10px 90px;
+  background-color: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 20px;
+  transition: background-color 0.2s;
+  display: inline-block;
+}
+
+.boton-regreso-simple:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Animación para campos dinámicos */
+#campos-emprendedor {
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .contenedor-registro {
+    grid-template-columns: 1fr;
+  }
+  
+  .imagen-registro {
+    display: none;
+  }
+  
+  .contenedor-formulario-registro {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contenido-cabecera {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .navegacion-principal ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .formulario-registro {
+    padding: 20px;
+  }
+  
+  .selector-tipo-cuenta {
+    flex-direction: column;
+  }
+  
+  .boton-tipo-cuenta {
+    padding: 10px;
+  }
+  
+  .boton-regreso-simple {
+    padding: 10px 40px;
+    font-size: 16px;
+  }
+}
+
+/* Efectos para mejorar la interacción */
+input:focus,
+textarea:focus,
+select:focus {
+  transform: translateY(-1px);
+}
+
+.boton-tipo-cuenta {
+  position: relative;
+  overflow: hidden;
+}
+
+.boton-tipo-cuenta::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+.boton-tipo-cuenta:focus:not(.activo)::after {
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(20, 20);
+    opacity: 0;
+  }
+}

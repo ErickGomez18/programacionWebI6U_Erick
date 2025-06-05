@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Generar Curp</title>
+</head>
+<body>
+    <h1 class="titulo">Generar Curp</h1>
+    <!--Formulario-->
+    <main class="contenedor">
+        <form class="formulario">
+            <fieldset>
+                <legend>Rellena los datos según lo que se te pide</legend>
+                <div class="contenedor-campos">
+                    <div class="campo">
+                        <label for="">Nombre</label>
+                        <input class="input-text" id="NombreIn" type="text" placeholder="Nombre" minlength="5" maxlength="40" title="Nombre no válido" required>
+                    </div>
+                    <div class="campo">
+                        <label for="">Primer Apellido</label>
+                        <input class="input-text" id="primerApellidoIn" type="text" placeholder="Primer Apellido" minlength="5" maxlength="40" required>
+                    </div>
+                    <div class="campo">
+                        <label for="">Segundo Apellido</label>
+                        <input class="input-text" id="segundoApellidoIn" type="text" placeholder="Segundo Apellido" minlength="5" maxlength="40">
+                    </div>
+                    <div class="campo">
+                        <label for="">Fecha de Nacimiento</label>
+                         <input type="date" id="fechaNacimientoIn" value="2024-02-25" required>
+                    </div>
+                    <div class="campo campo-radio">
+                        <div>
+                            <input type="radio" id="hombre" name="genero" value="H" required>
+                            <label for="hombre">Hombre</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="mujer" name="genero" value="M" required>
+                            <label for="mujer">Mujer</label>
+                        </div>
+                    </div>
+                      <div class="campo">
+                        <label for="">Entidad Federativa</label>
+                        <input class="input-text" id="entidadFedIn" type="text" placeholder="Entidad Federativa" minlength="5" maxlength="40" required>
+                    </div>
+                    <div class="boton">
+                         <input class="boton w-sm-100" type="button" value="Enviar" onclick="generarCurp()">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <!--Cargar scripts-->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="Entrepreneur.png">
+    <title>Formulario propio</title>
+</head>
+<body>
+    <div class="form-container">
+        <h2><img class = "logo" src="owner.png" alt="Icono" width="50" height="50">Registro de emprendedores.<img src="owner.png" alt="Icono" width="50" height="50"></h2>
+
+        <form>
+            <div class="form-group">
+                <label for="name">Nombre del propietario del emprendimiento:</label>
+                <input type="text" name="username" placeholder="Ej: Erick Gómez Cortéz" minlength="5" maxlength="40" required >
+            </div>
+            <div class="form-group">
+                <label for="name">Nombre del emprendimiento:</label>
+                <input type="text" name="username" placeholder="Ej: Dinocake" minlength="5" maxlength="60" required >
+            </div>
+            <div class="form-group">
+                <label for="name">Correo de contacto:</label>
+                <input type="email" name="username" placeholder="Ej: alguncorreo@example.com" minlength="5" maxlength="60" required pattern="[A-Za-z0-9._%+-]+@(gmail\.com|outlook\.com|hotmail.com)$" title="Favor de colocar un correo electrónico con formato valido y terminación gmail o hotmail/outlook">
+            </div>
+            <div class="form-group">
+                <label for="email">Número de celular:</label>
+                <input type="cellphone" id="celular" name="celular" placeholder = "Ej: 9831112223" minlength="10" maxlength="10" required pattern="[0-9]{10}" title = "Favor de colocar un número de celular de 10 digitos sin la clave lada." >
+            </div>
+            <div class="form-group">
+                <label for="age">Edad</label>
+                <input type="number" id="age" name="age" min="18" required>
+            </div>
+            <div class="form-group">
+                <label for="country">¿Cuenta con establecimiento físico?</label>
+                <div>
+                  <form>
+                    <ul>
+                      <li>
+                        <input type="radio" name="establecimiento" value="afirmativo" checked>Sí.</li>
+                        <li><input type="radio" name="establecimiento" value="negativo">No.</li>
+                    </ul>
+                  </form>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name">¿Podrías contarnos un poco sobre ti y tu emprendimiento?</label>
+                <input type="descripcion" name="descripcion" placeholder="Ej: Hola, mi nombre es Erick Gómez, soy estudiante de la carrera de sistemas en el ITCH y me dedico a vender postres varios hechos de manera casera" minlength="15" maxlength="450" required >
+            </div>
+            <button type="submit">Enviar solicitud.</button>
+        </form>
+    </div>
+</body>
+</html>

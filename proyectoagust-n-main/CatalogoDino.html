@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dino-Bake</title>
+    <!-- Enlace a css -->
+    <link rel="stylesheet" href="../css/CatalogoDino.css" />
+    <!-- Fuentes de Google para letra bonita -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet"
+    />
+    <style>
+        /* Estilos adicionales para los controles de cantidad */
+        .controles-cantidad {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0;
+        }
+
+        .controles-cantidad button {
+            background-color: #4CAF50; /* Verde similar al botón Añadir al carrito */
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .controles-cantidad button:hover {
+            background-color: #45a049; /* Verde un poco más oscuro al hacer hover */
+            transform: scale(1.1);
+        }
+
+        .controles-cantidad input {
+            width: 50px;
+            height: 30px;
+            text-align: center;
+            margin: 0 10px;
+            padding: 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            -moz-appearance: textfield; /* Oculta flechas en Firefox */
+        }
+
+        /* Oculta flechas en Chrome, Safari, Edge, Opera */
+        .controles-cantidad input::-webkit-outer-spin-button,
+        .controles-cantidad input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .controles-cantidad input:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+
+        /* Estilo actualizado para el botón Añadir al carrito */
+        .btn.agregar-carrito {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-align: center;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .btn.agregar-carrito:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="encabezado-principal">
+        <div class="contenedor">
+            <a href="index.html" class="logo-marca">
+                <img src="images/logo.png" alt="Dino-Bake Logo" width="120" />
+            </a>
+            <!-- Menú de navegación principal -->
+            <nav class="navegacion-principal">
+                <ul class="lista-navegacion">
+                    <li class="item-navegacion">
+                        <a href="emprendedores.html" class="enlace-navegacion">
+                            <img
+                                src="images/emprendedor.png"
+                                alt="Emprendedores"
+                                class="icono-navegacion"
+                            />
+                            <span>Emprendedores</span>
+                        </a>
+                    </li>
+
+                    <li class="item-navegacion">
+                        <a href="carrito.html" class="enlace-navegacion">
+                            <img
+                                src="images/carrito.png"
+                                alt="Carrito"
+                                class="icono-navegacion"
+                            />
+                            <span>Carrito</span>
+                        </a>
+                    </li>
+                    <li class="item-navegacion">
+                        <a href="contacto.html" class="enlace-navegacion">
+                            <img
+                                src="images/contacto.png"
+                                alt="Contacto"
+                                class="icono-navegacion"
+                            />
+                            <span>Contacto</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="perfil.html" class="perfil-usuario">
+                <img src="images/emprendedor.png" alt="usuario" />
+            </a>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="contenido-principal">
+        <section class="seccion-hero">
+            <div class="contenedor">
+                <div class="contenido-hero">
+                    <div class="texto-hero">
+                        <h1>DINO-BAKE</h1>
+                        <p class="descripcion-hero">
+                            Nuestros postres de pequeña presentación están pensados para deleitar todos tus sentidos. Son mucho más que dulces: son pequeños tesoros artesanales que transforman lo cotidiano en momentos memorables.
+                            Desde los brownies, con su textura húmeda y su sabor profundo a chocolate, hasta nuestros pays, que combinan una base crujiente con rellenos frutales y cremosos irresistibles, cada pieza es elaborada cuidadosamente para lograr un equilibrio perfecto entre sabor, presentación y frescura.
+                            Son ideales para consentirte, sorprender a tus invitados o dar un detalle especial en cualquier celebración.
+                            Descubre la magia de lo pequeño y permite que nuestros postres llenen tu día de dulzura, textura y momentos felices.
+                        </p>
+                    </div>
+                    <div class="imagen-hero">
+                        <img
+                            src="images/dinobake.png"
+                            class="mostrador-producto"
+                            alt="Dino Bake producto"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catálogo de productos -->
+        <section class="seccion-catalogo">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Nuestros productos</h2>
+                <div class="rejilla-productos">
+                    <!-- Productos -->
+                    <div
+                        class="tarjeta-producto"
+                        data-id="brownie001"
+                        data-nombre="Brownies"
+                        data-precio="35"
+                        data-emprendedor="Dino Bake"
+                    >
+                        <img
+                            src="images/Brownie.jpg"
+                            alt="Brownies"
+                            class="imagen-producto"
+                        />
+                        <div class="info-producto">
+                            <h3>Brownies</h3>
+                            <p class="precio-producto">$35 c/u</p>
+                            <div class="controles-cantidad">
+                                <button class="restar-cantidad">-</button>
+                                <input
+                                    type="number"
+                                    value="1"
+                                    min="1"
+                                    class="entrada-cantidad"
+                                />
+                                <button class="sumar-cantidad">+</button>
+                            </div>
+                            <button class="btn agregar-carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="tarjeta-producto"
+                        data-id="fresas001"
+                        data-nombre="Fresas con crema"
+                        data-precio="65"
+                        data-emprendedor="Dino Bake"
+                    >
+                        <img
+                            src="images/fresas.jpg"
+                            alt="Fresas con crema"
+                            class="imagen-producto"
+                        />
+                        <div class="info-producto">
+                            <h3>Fresas con crema</h3>
+                            <p class="precio-producto">$65 c/u</p>
+                            <div class="controles-cantidad">
+                                <button class="restar-cantidad">-</button>
+                                <input
+                                    type="number"
+                                    value="1"
+                                    min="1"
+                                    class="entrada-cantidad"
+                                />
+                                <button class="sumar-cantidad">+</button>
+                            </div>
+                            <button class="btn agregar-carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="tarjeta-producto"
+                        data-id="galletas001"
+                        data-nombre="Galletas"
+                        data-precio="20"
+                        data-emprendedor="Dino Bake"
+                    >
+                        <img
+                            src="images/Galletas.jpg"
+                            alt="Galletas"
+                            class="imagen-producto"
+                        />
+                        <div class="info-producto">
+                            <h3>Galletas</h3>
+                            <p class="precio-producto">$20 c/u</p>
+                            <div class="controles-cantidad">
+                                <button class="restar-cantidad">-</button>
+                                <input
+                                    type="number"
+                                    value="1"
+                                    min="1"
+                                    class="entrada-cantidad"
+                                />
+                                <button class="sumar-cantidad">+</button>
+                            </div>
+                            <button class="btn agregar-carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="tarjeta-producto"
+                        data-id="empanaditas001"
+                        data-nombre="Empanadas"
+                        data-precio="20"
+                        data-emprendedor="Dino Bake"
+                    >
+                        <img
+                            src="images/empanaditas.jpg"
+                            alt="Empanadas"
+                            class="imagen-producto"
+                        />
+                        <div class="info-producto">
+                            <h3>Empanaditas</h3>
+                            <p class="precio-producto">$20 c/u</p>
+                            <div class="controles-cantidad">
+                                <button class="restar-cantidad">-</button>
+                                <input
+                                    type="number"
+                                    value="1"
+                                    min="1"
+                                    class="entrada-cantidad"
+                                />
+                                <button class="sumar-cantidad">+</button>
+                            </div>
+                            <button class="btn agregar-carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cómo comprar -->
+        <section class="como-trabajamos">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Cómo comprar</h2>
+                <!-- Pasos del proceso -->
+                <div class="pasos-proceso">
+                    <div class="paso">
+                        <div class="numero-paso">1</div>
+                        <h3>Realiza tu pedido</h3>
+                    </div>
+                    <div class="paso">
+                        <div class="numero-paso">2</div>
+                        <h3>Recibe confirmación</h3>
+                    </div>
+                    <div class="paso">
+                        <div class="numero-paso">3</div>
+                        <h3>Realiza el pago</h3>
+                    </div>
+                    <div class="paso">
+                        <div class="numero-paso">4</div>
+                        <h3>Se entrega</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- Botón de regreso -->
+            <div class="contenedor-boton">
+                <a href="emprendedores.html" class="boton-regresar">Regresar</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/catalogo.js"></script>
+</body>
+</html>
